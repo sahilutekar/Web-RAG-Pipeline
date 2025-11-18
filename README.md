@@ -31,50 +31,7 @@ o	Indexed expanded documents into ChromaDB.
 o	Configured query engine for hierarchical summarization (tree_summarize).
 o	Validated pipeline via an advanced summarization query.
 
-In short:
-
-
-┌───────────────┐
-│   Web Sources │
-│  (URLs list)  │
-└───────┬───────┘
-        │
-        ▼
-┌────────────────┐
-│ Load & Clean   │
-│ (SimpleWebPage │
-│ Reader)        │
-└───────┬────────┘
-        │
-        ▼
-┌────────────────┐
-│ Vectorize Docs │
-│ (Embeddings)   │
-└───────┬────────┘
-        │
-        ▼
-┌─────────────────────┐
-│ Index in ChromaDB   │
-│ (Persistent Storage)│
-└───────┬─────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│ Query Engine Setup  │
-│ (tree_summarize)    │
-└───────┬─────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│ Run Advanced Query  │
-│ (Summarization)     │
-└───────┬─────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│ Summarized Output   │
-│ (Structured Text)   │
-└─────────────────────┘
+In short: Web Source → Load & Clean → Vectorize → Index → Query Engine → Summarization → Output.
 
 
 Output glimpse 
