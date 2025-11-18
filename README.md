@@ -33,7 +33,49 @@ o	Validated pipeline via an advanced summarization query.
 
 In short:
 
-Web Source → Load & Clean → Vectorize → Index → Query Engine → Summarization → Output.
+
+┌───────────────┐
+│   Web Sources │
+│  (URLs list)  │
+└───────┬───────┘
+        │
+        ▼
+┌────────────────┐
+│ Load & Clean   │
+│ (SimpleWebPage │
+│ Reader)        │
+└───────┬────────┘
+        │
+        ▼
+┌────────────────┐
+│ Vectorize Docs │
+│ (Embeddings)   │
+└───────┬────────┘
+        │
+        ▼
+┌─────────────────────┐
+│ Index in ChromaDB   │
+│ (Persistent Storage)│
+└───────┬─────────────┘
+        │
+        ▼
+┌─────────────────────┐
+│ Query Engine Setup  │
+│ (tree_summarize)    │
+└───────┬─────────────┘
+        │
+        ▼
+┌─────────────────────┐
+│ Run Advanced Query  │
+│ (Summarization)     │
+└───────┬─────────────┘
+        │
+        ▼
+┌─────────────────────┐
+│ Summarized Output   │
+│ (Structured Text)   │
+└─────────────────────┘
+
 
 Output glimpse 
 --- Summarized Response ---
