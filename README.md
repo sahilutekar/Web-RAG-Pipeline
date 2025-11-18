@@ -34,3 +34,34 @@ o	Validated pipeline via an advanced summarization query.
 In short:
 
 Web Source → Load & Clean → Vectorize → Index → Query Engine → Summarization → Output.
+
+
+--- Summarized Response ---
+
+ Common Types of Cancer
+---------------------
+
+### Breast Cancer
+Breast cancer typically begins in the breast tissue. It is the most common type of cancer in women and the second most common type of cancer in men. Early detection through regular mammograms and self-exams can increase the chances of successful treatment.
+
+### Lung Cancer
+Lung cancer typically begins in the lung tissue. It is the leading cause of cancer death in both men and women. Early detection through regular chest X-rays and CT scans can increase the chances of successful treatment.
+
+### Colorectal Cancer
+Colorectal cancer typically begins in the colon or rectum. It is the third most common type of cancer in both men and women. Early detection through regular colonoscopies and fecal occult blood testing can increase the chances of successful treatment.
+
+### Prostate Cancer
+Prostate cancer typically begins in the prostate gland. It is the most common type of cancer in men. Early detection through regular prostate-specific antigen (PSA) tests and digital rectal exams can increase the chances of successful treatment.
+
+### Melanoma
+Melanoma typically begins in the skin. It
+
+--- Pipeline Enhancements Summary ---
+
+Enhancements made:
+- Added 2 new authoritative web sources about cancer (American Cancer Society, CDC)
+- Loaded cleaned text of the new web pages using SimpleWebPageReader
+- Created a new persistent ChromaDB collection and indexed the expanded documents
+- Configured the query engine to summarize retrieved documents (tree_summarize)
+- Executed an advanced summarization query to validate the pipeline
+
