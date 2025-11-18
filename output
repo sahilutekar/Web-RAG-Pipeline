@@ -1,0 +1,57 @@
+Loading web pages (this may take a moment)...
+Loaded 3 web documents from the specified URLs.
+
+First document preview (first 200 chars):
+Skip to main content
+
+An official website of the United States government
+
+[Español](/espanol/cancer/naturaleza/que-es)
+
+[ ![National Cancer Institute Home
+Page](/sites/g/files/xnrzdm211/files/ncids_h
+
+Using Chroma collection: web_cancer_collection_1763102985
+Indexing documents into ChromaDB (this may take a while depending on your embeddings setup)...
+Indexing complete. Vector store now contains vectors for the provided web documents.
+
+Running advanced summarization query...
+
+/usr/local/lib/python3.12/dist-packages/llama_cpp/llama.py:1242: RuntimeWarning: Detected duplicate leading "<s>" in prompt, this will likely reduce response quality, consider removing it...
+  warnings.warn(
+Llama.generate: 104 prefix-match hit, remaining 384 prompt tokens to eval
+llama_perf_context_print:        load time =  119075.44 ms
+llama_perf_context_print: prompt eval time =   69024.61 ms /   384 tokens (  179.75 ms per token,     5.56 tokens per second)
+llama_perf_context_print:        eval time =  160724.46 ms /   255 runs   (  630.29 ms per token,     1.59 tokens per second)
+llama_perf_context_print:       total time =  229929.21 ms /   639 tokens
+llama_perf_context_print:    graphs reused =        246
+
+
+--- Summarized Response ---
+
+ Common Types of Cancer
+---------------------
+
+### Breast Cancer
+Breast cancer typically begins in the breast tissue. It is the most common type of cancer in women and the second most common type of cancer in men. Early detection through regular mammograms and self-exams can increase the chances of successful treatment.
+
+### Lung Cancer
+Lung cancer typically begins in the lung tissue. It is the leading cause of cancer death in both men and women. Early detection through regular chest X-rays and CT scans can increase the chances of successful treatment.
+
+### Colorectal Cancer
+Colorectal cancer typically begins in the colon or rectum. It is the third most common type of cancer in both men and women. Early detection through regular colonoscopies and fecal occult blood testing can increase the chances of successful treatment.
+
+### Prostate Cancer
+Prostate cancer typically begins in the prostate gland. It is the most common type of cancer in men. Early detection through regular prostate-specific antigen (PSA) tests and digital rectal exams can increase the chances of successful treatment.
+
+### Melanoma
+Melanoma typically begins in the skin. It
+
+--- Pipeline Enhancements Summary ---
+
+Enhancements made:
+- Added 2 new authoritative web sources about cancer (American Cancer Society, CDC)
+- Loaded cleaned text of the new web pages using SimpleWebPageReader
+- Created a new persistent ChromaDB collection and indexed the expanded documents
+- Configured the query engine to summarize retrieved documents (tree_summarize)
+- Executed an advanced summarization query to validate the pipeline
