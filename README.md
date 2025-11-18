@@ -35,7 +35,7 @@ In short:
 
 Web Source → Load & Clean → Vectorize → Index → Query Engine → Summarization → Output.
 
-
+Output glimpse 
 --- Summarized Response ---
 
  Common Types of Cancer
